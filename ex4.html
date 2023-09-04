@@ -35,12 +35,19 @@
     </style>
 </head>
 <body>
-    <br><br>
+    <br>
     <h1>Clique no botão e escreva uma mensagem para exibir no quadro abaixo</h1>
-    <button>botão</button>
+    <button onclick="inicio()">botão</button>
     <br><br><br>
-    <section>
+    <section id="resultado">
         <p>a mensagem irá aparecer aqui</p>
     </section>
+    <script>
+        function inicio(){
+            let nome = window.prompt('Qual é o seu nome?')
+            let res = window.document.getElementById('resultado')
+            res.innerHTML = `<p> Olá, <strong>${nome}</strong>. É um prazer te conhecer!`
+        }
+    </script>
 </body>
 </html>
